@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en múltiples líneas */
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    max-width: 100%; /* Hace que las imágenes sean responsivas, ocupando como máximo su tamaño original */
+    height: auto;
+    margin: 0 10px;
+  }
+  
+  #jugar-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 600px) {
+    /* Ajustes específicos para pantallas con un ancho máximo de 600px (smartphones) */
+    img {
+      margin: 10px; /* Aumenta el espacio entre las imágenes */
+    }
+  }
+  
