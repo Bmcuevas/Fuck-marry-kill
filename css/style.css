@@ -1,42 +1,115 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  scroll-behavior: smooth;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #3a6186, #89253e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+}
+
+h1 {
+	text-align: left;
+	font-size: 100px; 
+	margin-bottom: 24px;
+	color: #fff; 
+}
+
+a,.instagram{ 
+  text-align: left;
+	font-size: 24px;
+	color: white; 
+	padding-top: 15px;
+}
+
+.title{ 
+  margin: 20px;
+}
+
+.btn_container{ 
+  padding: 20px;
+}
+
+#image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 10px;
+}
+
+
+
+ #jugar-btn {
+  position: relative;
+  background-color: rgb(230, 34, 77);
+  border-radius: 5px;
+  box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  width: 154px;
+  height: 49px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#jugar-btn::before {
+  content: "";
+  background-color: rgb(248, 50, 93);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 700ms ease-in-out;
+  display: inline-block;
+}
+
+#jugar-btn:hover::before {
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  img {
+      margin: 10px;
+      padding: 20px;
+      width: 100%; /* Ensure images take up 100% width on smaller screens */
   }
 
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  #image-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en múltiples líneas */
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  img {
-    max-width: 100%; /* Hace que las imágenes sean responsivas, ocupando como máximo su tamaño original */
-    height: auto;
-    margin: 0 10px;
-  }
-  
   #jugar-btn {
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
+      font-size: 14px; /* Adjust button font size for smaller screens */
+      padding: 8px 16px; /* Adjust button padding for smaller screens */
   }
-  
-  @media screen and (max-width: 600px) {
-    /* Ajustes específicos para pantallas con un ancho máximo de 600px (smartphones) */
-    img {
-      margin: 10px; /* Aumenta el espacio entre las imágenes */
-    }
+  .btn_container{ 
+    padding: 20px;
+
   }
-  
+
+  h1{
+    font-size: 55px;
+  }
+}
