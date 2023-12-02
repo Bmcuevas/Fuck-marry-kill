@@ -2,7 +2,7 @@
  function obtenerImagenAleatoria() {
     const carpeta = 'imagenes';
     const imagenes = [];
-    for (let i = 1; i <= 116; i++) {
+    for (let i = 1; i <= 115; i++) {
       imagenes.push(`imagen${i}.png`);
     } // Agrega aquí el nombre de tus imágenes
     const imagenAleatoria = imagenes[Math.floor(Math.random() * imagenes.length)];
